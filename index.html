@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Case Builder</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="case">
+        <h2>Case Builder</h2>
+        <div class="flex-row">
+            <input type="text" id="case-name" placeholder="Enter case name">
+
+            <input type="text" id="case-image" placeholder="Enter case image URL">
+        </div>
+
+        <h3>Items:</h3>
+        <div class="items-container">
+            <div class="items-list" id="items-list"></div>
+        </div>
+        <button id="add-item-btn">Add Item</button>
+
+        <button id="build-case-btn">Build Case</button>
+    </div>
+
+    <script src="index.js"></script>
+
+    <div id="item-popup" class="popup">
+        <div class="popup-content">
+            <span id="close-popup-btn" class="close-popup-btn">&times;</span>
+            <div class="flex-row">
+              <input class="search-input" type="text" id="item-search" placeholder="Enter item name">
+              <h3>Select Item:</h3>
+            </div>
+            <div id="item-popup-container" class="items-popup-container"></div>
+            <label for="percent-chance">Percent Chance:</label>
+            <input type="number" id="percent-chance" placeholder="Enter percent chance">
+            <button id="add-item-popup-btn">Add Item</button>
+        </div>
+    </div>
+
+</body>
+</html>
