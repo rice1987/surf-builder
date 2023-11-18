@@ -39,18 +39,13 @@ document.addEventListener('DOMContentLoaded', function () {
       .then(response => response.json())
       .then(items => {
         itemContainer.innerHTML = '';
-  
-        // Get the search input value
-        const searchInput = document.getElementById('item-search');
+          const searchInput = document.getElementById('item-search');
         const searchTerm = searchInput.value.toLowerCase();
   
-        // Filter items based on the search query
         const filteredItems = items.filter(item => item.name.toLowerCase().includes(searchTerm));
   
-        // Sort the filtered items by price
         filteredItems.sort((a, b) => b.price - a.price);
   
-        // Populate the item container with filtered and sorted items
         filteredItems.forEach(item => {
           const itemDiv = document.createElement('div');
           itemDiv.classList.add('popup-item');
@@ -194,7 +189,7 @@ document.addEventListener('DOMContentLoaded', function () {
         items: caseItems,
       };
     
-      console.log('Built Case:', caseDetails);
+      console.log(caseDetails);
     
       document.getElementById('case-name').value = '';
       document.getElementById('case-image').value = '';
